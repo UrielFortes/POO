@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
 
     public Rigidbody rb;
     public float forcaTiro;
-
+     
     public Score score;
 
 

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Bomb : MonoBehaviour
 {
-    public Score scoreDegree;
+    
     void Start()
     {
         
@@ -13,13 +13,14 @@ public class Enemy : MonoBehaviour
     
     void Update()
     {
-        Destroy(this.gameObject, 1.8f);
+        Destroy(this.gameObject, 1.85f);
     }
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("chao"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            scoreDegree.value--;
-        }
+            Debug.Log("Colidiu com o Player");
+        };
     }
 }
