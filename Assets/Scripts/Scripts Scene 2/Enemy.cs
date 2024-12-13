@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public Score scoreDegree;
+    public GameObject explosion;
     void Start()
     {
         
@@ -20,6 +21,11 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("chao"))
         {
             scoreDegree.value--;
+        }
+        if (collision.gameObject.CompareTag("missile"))
+        {
+            Instantiate(explosion, transform.position, transform.rotation);
+            Destroy(this.gameObject);
         }
     }
 }

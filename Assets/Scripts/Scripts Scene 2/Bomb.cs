@@ -14,19 +14,21 @@ public class Bomb : MonoBehaviour
     }
 
     
+    
     void Update()
     {
         Destroy(this.gameObject, 0.85f);
 
         rb.velocity =  transform.up * strengthVelocity;
+        
     }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Colidiu no Player");
-        };
+            Destroy(this.gameObject);
+            
+        }
     }
 
 }

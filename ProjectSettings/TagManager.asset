@@ -6,6 +6,9 @@ TagManager:
   tags:
   - inimigo
   - chao
+  - Explosion
+  - Bomb
+  - missile
   layers:
   - Default
   - TransparentFX
